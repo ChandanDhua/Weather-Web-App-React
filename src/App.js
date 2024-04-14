@@ -8,7 +8,7 @@ function App() {
   const [tab,setTab] = useState("userTab");
 
   return (
-    <div className="w-[100vw] h-[100vh] flex flex-col items-center wrapper">
+    <div className="w-[100vw] max-h-max flex flex-col items-center wrapper">
 
       <div className="w-full">
 
@@ -32,12 +32,7 @@ function App() {
       </div>
       <div className="mt-[4rem] w-[35vw] flex justify-center">
         {
-          tab === "userTab" ? (
-            <YourLocation/>
-            ) : 
-            (
-            <SearchLocation/>
-            )
+          tab === "userTab" ? (<YourLocation/>) : (<SearchLocation/>)
         }
       </div>
     </div>
